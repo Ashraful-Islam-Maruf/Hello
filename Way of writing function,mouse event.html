@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<style type="text/css" media="all">
+  button{
+    font-size: 89px;
+    position: relative;
+    left: 240px;
+    background-color: #D73381;
+    color: #FFFFFF;
+    font-weight: bolder;
+    margin-right: 15px;
+  }
+  p{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 60px;
+    text-align: center;
+  }
+ .i{
+   text-align: center;
+ }
+.job{
+  text-align: center;
+}
+</style>
+<body>
+  
+
+<!--
+            #First Way
+
+<a href="#"
+class="onclick"onclick="callingaFunction()" 
+>
+  <button type="">Click me</button>
+</a>
+
+<script type="text/javascript" charset="utf-8">
+  const callingaFunction = () => {
+    alert('Here all are boxod');
+  }
+</script>
+-->
+<!--
+               #Second-Way
+<a href="#"
+class="onclick"onclick="alert('None use me')"
+>
+  <button type="">Click me</button>
+</a>
+-->
+
+<!--
+         
+                #Third--way
+          
+<a href="#"
+id="jio" 
+>
+  <button type="">Click me</button>
+</a>
+<script type="text/javascript" charset="utf-8">
+  const jio = document.getElementById("jio");
+  jio.onclick=function(){
+    alert('there is deep message');
+  }
+</script>
+-->
+
+
+<!--
+              #Forth--way
+
+<a href="#"
+id="jio" 
+>
+  <button type="">Click me</button>
+</a>
+<script>
+  const jio = document.querySelector('#jio');
+  jio.addEventListener('click',() => {
+    alert('You are hired');
+  })
+</script>
+-->
+
+
+<!--
+
+          #MOUSE--EVENT
+<p id="pio" onmouseup="mouseup()" onmousedown="mousedown()">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt dolorem a, pariatur ipsum magni assumenda corporis, doloremque distinctio dicta.
+</p>
+<script type="text/javascript" charset="utf-8">
+    function mouseup(){
+      document.getElementById('pio').style.color ='red';
+    }
+    function mousedown(){
+      document.getElementById('pio').style.color = 'orange';
+    }
+</script>
+-->
+
+<!--
+            #Mouse-Enter
+<p id="pio">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt dolorem a, pariatur ipsum magni assumenda corporis, doloremque distinctio dicta.
+</p>
+<script>
+  const pio = document.getElementById('pio');
+  pio.addEventListener('mouseenter', () => {
+    pio.style.color = ('red');
+  });
+  console.log('There mouse enter');
+
+          #Mouse-leave
+  pio.addEventListener('mouseleave', () => {
+    pio.style.color = ('pink');
+  });
+  console.log('There mouse leave');
+</script>
+-->
+<!--
+<label for="">Your Name?</label>
+<input type="text" name="" id="harami" value="" />
+
+<br />
+<label for="">Your icecream Flavour 
+<select name="icecream" id="icecream" onchange="selectelem()">
+  <option value="">slect one</option>
+  <option value="chocklate">chocklate</option>
+    <option value="vanilla">vanilla</option>
+  <option value="strawberry">strawberry</option>
+</select>
+</label>
+<div id="result"></div>
+
+<script type="text/javascript" charset="utf-8">
+const selectelem = () => {
+  const inputcng = document.getElementById('harami').value;
+  const icecream = document.getElementById('icecream').value;
+  const result = document.getElementById('result');
+  result.innerHTML = `Mr ${inputcng} select ${icecream} icecream flavour`;
+}
+</script>
+-->
+<!--
+        SET TIME OUT
+<h2>Want To Know my Name?</h2>
+<div class="i">
+<p id="heda"></p>
+</div>
+<button id="btn" type="">Click Here</button>
+
+<script type="text/javascript" charset="utf-8">
+  const myName = document.querySelector('#heda');
+  const btn = document.querySelector('#btn');
+  
+  const showMyname = () => {
+          myName.innerHTML='Loading....';
+
+    setTimeout(()=> {
+      myName.innerHTML='Ashraful Maruf';
+    },1000
+      )
+  }
+  btn.addEventListener('click',showMyname)
+</script>
+-->
+
+<div class="job">
+  <p>Can You Stop it before 5s</p>
+</div>
+<button id="btn" type="submit">Start</button>
+<button id="btn-1" type="submit">Stop</button>
+
+
+<script>
+
+    const myName = document.querySelector('p');
+  const btn = document.querySelector('#btn');
+  const stopInterval = document.querySelector('#btn-1');
+  
+  let timeref;
+  let num = 0;
+  
+  const showMyname = () => {
+          myName.innerHTML='Loading....';
+
+  timeref =  setInterval(()=> {
+      myName.innerHTML=`${num}`;
+      num++;
+    },1000
+      )
+  }
+  btn.addEventListener('click',showMyname);
+  stopInterval.addEventListener('click',  () => {
+    clearInterval(timeref);
+  })
+  
+</script>
+</body>
+</html>

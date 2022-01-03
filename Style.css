@@ -1,0 +1,47 @@
+*{
+  margin: 0px;
+  padding: 0px:
+}
+body{
+  background-color: #2E5497;
+  color: #FFFFFF;
+}
+.hh{
+  border-bottom: 2px solid #FFFFFF;
+  margin-bottom: 14px;
+}
+.hh p{
+  position: relative;
+  top: 14px;
+}
+.bal{
+  border-bottom: 2px solid #FFFFFF;
+  position: relative;
+width: 460px;
+  left: 10px;
+}
+.bal p{
+  position: relative;
+  top: 14px;
+  right: 8px;
+}
+.jio button{
+  width: 465px;
+  position: relative;
+  left: 8px;
+  margin-top: 40px;
+  color: #FFFFFF;
+  background-color: #3848FF;
+  padding: 16px ;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.gio{
+  margin-top: 80px;
+  position: relative;
+  left: 155px;
+}
+.dann{
+  position: relative;
+  left: 164px;
+}
